@@ -77,7 +77,7 @@ circle.station.active {
 #conversation > .message-wrapper > .person {
   margin-top: 0.5rem;
   font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.5);
 }
 #conversation > .message-wrapper > .message {
   padding: 0.25rem 0.5rem;
@@ -116,7 +116,7 @@ circle.station.active {
 <script src="record.js"></script>
 <script>
 for(let entry of record) {
-  entry.timestamp = new Date('2018-10-21T' + entry.time).getTime()
+  entry.timestamp = new Date(`21 October 2018 ${entry.time} GMT+8`).getTime()
 }
 for(let i = 0; i < record.length; i++) {
   let entry = record[i]
@@ -174,7 +174,7 @@ clockElement.innerHTML = record[0].time
 let clockInterval = 1000
 let clockHandle = setInterval(() => {
   clock = clock + clockInterval
-  let dateObj = new Date(record[0].timestamp + clock * animationToActualDuration)
+  let dateObj = new Date(Math.round(record[0].timestamp + clock * animationToActualDuration))
   clockElement.innerHTML = dateObj.getHours() + ':' + (dateObj.getMinutes() < 10 ? '0' : '') + dateObj.getMinutes() + ':' + (dateObj.getSeconds() < 10 ? '0' : '') + dateObj.getSeconds()
   if(clock >= animationDuration) {
     clearInterval(clockHandle)
