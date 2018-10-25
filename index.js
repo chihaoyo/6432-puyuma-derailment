@@ -11,6 +11,7 @@ const colon = '：'
 const driver = '司機員'
 const coordinator = '調度員'
 const inspector = '檢查員'
+const system = '系統'
 
 let currentTime
 let currentLocation
@@ -28,12 +29,12 @@ let entries = lines.map(line => {
     return
   } else if(content.indexOf(statusKeyword) === 0) {
     let [trash, status] = content.split(colon)
-    person = 'system'
+    person = system
     content = status
   } else if(content.indexOf(colon) > -1) {
     [person, content] = content.split(colon)
     if(person === noteKeyword) {
-      person = 'system'
+      person = system
     }
   }
   return {

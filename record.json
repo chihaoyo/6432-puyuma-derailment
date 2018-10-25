@@ -46,7 +46,7 @@
       "from": "福隆",
       "to": "大里"
     },
-    "person": "system",
+    "person": "系統",
     "content": "1、8主風泵停止運轉"
   },
   {
@@ -256,7 +256,7 @@
       "from": "大里",
       "to": "大溪"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR過低造成MRPS和PBPS未閉合，動力抑制"
   },
   {
@@ -435,7 +435,7 @@
       "type": "around",
       "at": "大溪"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR恢復並請機班重新昇弓，疑似司機員重新啟動未開啟ATP"
   },
   {
@@ -571,7 +571,7 @@
       "from": "大溪",
       "to": "龜山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR曾回復至6.0bar以上，此時MRPS未動作，動力抑制"
   },
   {
@@ -671,7 +671,7 @@
       "from": "大溪",
       "to": "龜山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "此時MR過低MRPS切開動力抑制。"
   },
   {
@@ -711,7 +711,7 @@
       "from": "大溪",
       "to": "龜山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR回復至6.0bar以上。"
   },
   {
@@ -811,7 +811,7 @@
       "from": "大溪",
       "to": "龜山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "此時MR過低造成MRPS、PBPS切開動力抑制。"
   },
   {
@@ -841,7 +841,7 @@
       "from": "大溪",
       "to": "龜山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR曾恢復MRPS及PBPS動作，建立動力，隨後MR下降MRPS切開動力抑制。"
   },
   {
@@ -881,7 +881,7 @@
       "from": "大溪",
       "to": "龜山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "傾斜系統確認進入備援傾斜狀態及主風泵強制停止。"
   },
   {
@@ -921,7 +921,7 @@
       "from": "大溪",
       "to": "龜山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR過低使MRPS及PBPS切開，動力抑制。"
   },
   {
@@ -1171,7 +1171,7 @@
       "from": "龜山",
       "to": "頭城"
     },
-    "person": "system",
+    "person": "系統",
     "content": "列車位於頭城附近。"
   },
   {
@@ -1191,7 +1191,7 @@
       "from": "龜山",
       "to": "頭城"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR逐漸回升使MRPS閉合建立動力。"
   },
   {
@@ -1511,7 +1511,7 @@
       "from": "龜山",
       "to": "頭城"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR回升，但隨後下降後MRPS切開動力抑制。"
   },
   {
@@ -1531,7 +1531,7 @@
       "from": "龜山",
       "to": "頭城"
     },
-    "person": "system",
+    "person": "系統",
     "content": "傾斜系統進入備援傾斜，原因不明。"
   },
   {
@@ -1561,7 +1561,7 @@
       "from": "龜山",
       "to": "頭城"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR過低，動力抑制。"
   },
   {
@@ -1950,7 +1950,7 @@
       "type": "around",
       "at": "宜蘭"
     },
-    "person": "system",
+    "person": "系統",
     "content": "礁溪通過後滑行MR過低MRPS、BPPS切開，動力抑制。停車後，MR恢復解除抑制。"
   },
   {
@@ -2040,7 +2040,7 @@
       "type": "around",
       "at": "宜蘭"
     },
-    "person": "system",
+    "person": "系統",
     "content": "宜蘭停車。"
   },
   {
@@ -2149,7 +2149,7 @@
       "from": "宜蘭",
       "to": "二結"
     },
-    "person": "system",
+    "person": "系統",
     "content": "宜蘭開車後 "
   },
   {
@@ -2259,7 +2259,7 @@
       "from": "宜蘭",
       "to": "二結"
     },
-    "person": "system",
+    "person": "系統",
     "content": "MR>7 bar但1、8車空壓機強制停止中。"
   },
   {
@@ -2389,7 +2389,7 @@
       "from": "羅東",
       "to": "冬山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "8車BOUN OFF位後再ON位，強制停止訊號再次產生，1車未執行復位動作。"
   },
   {
@@ -2479,7 +2479,7 @@
       "from": "羅東",
       "to": "冬山"
     },
-    "person": "system",
+    "person": "系統",
     "content": "ATP關機中"
   },
   {
@@ -2629,7 +2629,7 @@
       "from": "冬山",
       "to": "新馬"
     },
-    "person": "system",
+    "person": "系統",
     "content": "8車BOUN OFF位後再ON位，強制停止訊號再次產生，1車未執行復位動作。"
   },
   {
@@ -2748,7 +2748,7 @@
       "type": "around",
       "at": "新馬"
     },
-    "person": "system",
-    "content": "翻覆"
+    "person": "系統",
+    "content": "列車出軌翻覆"
   }
 ]
