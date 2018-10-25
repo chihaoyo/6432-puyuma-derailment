@@ -7,6 +7,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
 }
 path {
   stroke: #ccc;
@@ -18,13 +20,40 @@ path {
 path#track-gongliao-xincheng {
   stroke: #000;
 }
+#clock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+}
 #conversation {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 500px;
+  max-width: 480px;
+  height: 640px;
   overflow: scroll;
+}
+#conversation > .message-wrapper {
+  margin: 0.5rem 0 0.5rem 4rem;
+}
+#conversation > .message-wrapper.driver {
+  margin: 0.5rem 1rem;
+}
+#conversation > .message-wrapper > .person {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+#conversation > .message-wrapper > .message {
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+#conversation > .message-wrapper.driver > .message {
+  background-color: rgba(0, 118, 255, 0.15);
 }
   </style>
 </head>
@@ -60,9 +89,23 @@ let actualToAnimationDuration = animationDuration / actualDuration
 let animationToActualDuration = actualDuration / animationDuration
 
 function displayEntry(entry) {
-  let el = document.createElement('div')
-  el.innerHTML = entry.content
-  conversationElement.appendChild(el)
+  let wrapper = document.createElement('div')
+  wrapper.classList = 'message-wrapper'
+  if(entry.person === '司機員') {
+    wrapper.classList.add('driver')
+  } else {
+    let person = document.createElement('div')
+    person.classList.add('person')
+    person.innerHTML = entry.person
+    wrapper.appendChild(person)
+  }
+
+  let message = document.createElement('span')
+  message.classList.add('message')
+  message.innerHTML = entry.content
+  wrapper.appendChild(message)
+
+  conversationElement.appendChild(wrapper)
   conversationElement.scrollTo(0, conversationElement.scrollHeight)
 }
 function show() {
@@ -81,7 +124,7 @@ let clockInterval = 1000
 let clockHandle = setInterval(() => {
   clock = clock + clockInterval
   let dateObj = new Date(record[0].timestamp + clock * animationToActualDuration)
-  clockElement.innerHTML = dateObj.toLocaleString()
+  clockElement.innerHTML = dateObj.getHours() + ':' + (dateObj.getMinutes() < 10 ? '0' : '') + dateObj.getMinutes() + ':' + (dateObj.getSeconds() < 10 ? '0' : '') + dateObj.getSeconds()
   if(clock >= animationDuration) {
     clearInterval(clockHandle)
   }
