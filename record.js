@@ -1531,7 +1531,7 @@ let record = [
       "from": "龜山",
       "to": "頭城"
     },
-    "person": "註",
+    "person": "system",
     "content": "傾斜系統進入備援傾斜，原因不明。"
   },
   {
@@ -1561,7 +1561,7 @@ let record = [
       "from": "龜山",
       "to": "頭城"
     },
-    "person": "註",
+    "person": "system",
     "content": "MR過低，動力抑制。"
   },
   {

@@ -6,6 +6,7 @@ const bracketR = '）'
 const locationConnector = '-'
 const locationKeyword = '地點'
 const statusKeyword = '車況'
+const noteKeyword = '註'
 const colon = '：'
 const driver = '司機員'
 const coordinator = '調度員'
@@ -31,6 +32,9 @@ let entries = lines.map(line => {
     content = status
   } else if(content.indexOf(colon) > -1) {
     [person, content] = content.split(colon)
+    if(person === noteKeyword) {
+      person = 'system'
+    }
   }
   return {
     time: currentTime,
