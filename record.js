@@ -1,4 +1,4 @@
-[
+let record = [
   {
     "time": "16:05:59",
     "location": {

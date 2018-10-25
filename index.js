@@ -40,5 +40,5 @@ let entries = lines.map(line => {
   }
 }).filter(entry => !!entry)
 
-console.log(entries.length)
 fs.writeFileSync('record.json', JSON.stringify(entries, null, 2))
+fs.writeFileSync('record.js', 'let record = ' + JSON.stringify(entries, null, 2))
