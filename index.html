@@ -33,6 +33,13 @@ path {
 path#track-gongliao-xincheng {
   stroke: rgb(0, 118, 255);
 }
+text {
+  font-size: 0.875rem;
+  fill: #ccc;
+}
+text.active {
+  fill: rgb(0, 118, 255);
+}
 circle {
   stroke: none;
 }
@@ -104,6 +111,14 @@ circle.station.active {
     <circle class="station active" cx="291" cy="446" r="4"></circle>
     <circle class="station active" cx="309" cy="547" r="4"></circle>
     <circle class="station active" cx="357" cy="606" r="4"></circle>
+    <text x="16" y="100">台北</text>
+    <text x="246" y="60">七堵</text>
+    <text x="450" y="116" class="active">貢寮</text>
+    <text x="414" y="276" class="active">龜山</text>
+    <text x="362" y="340" class="active">頭城</text>
+    <text x="300" y="450" class="active">宜蘭</text>
+    <text x="318" y="550" class="active">羅東</text>
+    <text x="366" y="610" class="active">新馬</text>
     <circle id="train" r="8">
       <animateMotion dur="480s" rotate="auto" fill="freeze">
         <mpath xlink:href="#track-gongliao-xincheng"></mpath>
