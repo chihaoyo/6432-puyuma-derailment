@@ -81,7 +81,6 @@ circle.station.active {
 }
 #conversation-wrapper {
   width: 100%;
-  height: 100%;
 }
 #conversation {
   width: 100%;
@@ -125,9 +124,19 @@ circle.station.active {
 .message-wrapper.system > .message {
   background: none;
 }
+.notice {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  color: #ccc;
+}
   </style>
 </head>
 <body>
+  <div class="notice">列車位置及時間為模擬結果</div>
   <div class="time-wrapper">
     <div class="time">
       <div id="date">2018-10-21</div>
