@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>6432</title>
   <style>
+* {
+  box-sizing: border-box;
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -14,7 +17,6 @@ body {
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  box-sizing: border-box;
 }
 svg {
   position: fixed;
@@ -89,28 +91,39 @@ circle.station.active {
   overflow: scroll;
   padding-top: 2rem;
 }
-#conversation > .message-wrapper {
+.message-wrapper {
   width: calc(100% - 3rem);
   margin: 0.5rem 0;
   padding-left: 3rem;
 }
-#conversation > .message-wrapper.driver {
+.message-wrapper.driver {
   width: 100%;
-  padding-left: 0;
+  margin: 0.5rem 0;
+  padding: 0;
 }
-#conversation > .message-wrapper > .person {
+.message-wrapper.system {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgba(0, 118, 255, 0.5);
+}
+.message-wrapper > .person {
   margin-top: 0.5rem;
   font-size: 0.75rem;
   color: rgba(0, 0, 0, 0.5);
 }
-#conversation > .message-wrapper > .message {
+.message-wrapper > .message {
   padding: 0.25rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.05);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-#conversation > .message-wrapper.driver > .message {
+.message-wrapper.driver > .message {
   background-color: rgba(0, 118, 255, 0.15);
+}
+.message-wrapper.system > .message {
+  background: none;
 }
   </style>
 </head>
@@ -181,6 +194,8 @@ function displayEntry(entry) {
   wrapper.classList = 'message-wrapper'
   if(entry.person === '司機員') {
     wrapper.classList.add('driver')
+  } else if(entry.person === '系統') {
+    wrapper.classList.add('system')
   } else {
     let person = document.createElement('div')
     person.classList.add('person')
